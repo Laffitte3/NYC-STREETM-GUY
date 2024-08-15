@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbwa0keodd5c0"]
+
+[ext_resource type="PackedScene" uid="uid://bgpaeky8xreu1" path="res://parallax_background.tscn" id="1_wbts3"]
+[ext_resource type="Script" path="res://game.gd" id="1_y4ftr"]
+[ext_resource type="PackedScene" uid="uid://cet5r6312c3qi" path="res://player.tscn" id="2_ysvf6"]
+[ext_resource type="PackedScene" uid="uid://caiaxxnrodcax" path="res://suelo.tscn" id="3_67aoh"]
+[ext_resource type="PackedScene" uid="uid://cn7tvi4npr6xp" path="res://hud.tscn" id="6_p0v5s"]
+[ext_resource type="Script" path="res://AudioStreamPlayer2D.gd" id="6_xyvuu"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_y4ftr")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_wbts3")]
+
+[node name="Player" parent="." instance=ExtResource("2_ysvf6")]
+process_mode = 3
+z_index = 1
+
+[node name="Suelo" parent="." instance=ExtResource("3_67aoh")]
+position = Vector2(0, -31)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(582, 326)
+
+[node name="crearObataculos" type="Timer" parent="."]
+autostart = true
+
+[node name="crearSierra" type="Timer" parent="."]
+autostart = true
+
+[node name="HUD" parent="." instance=ExtResource("6_p0v5s")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
+script = ExtResource("6_xyvuu")
+
+[connection signal="timeout" from="crearObataculos" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="crearSierra" to="." method="_on_crear_sierra_timeout"]

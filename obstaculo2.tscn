@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpctjt0pi3hph"]
+
+[ext_resource type="Script" path="res://obstaculo2.gd" id="1_k347w"]
+[ext_resource type="Texture2D" uid="uid://clag6hi618i8a" path="res://3 Objects/Stones/5.png" id="1_mcnv5"]
+
+[node name="obstaculo2" type="Area2D" groups=["obstaculos"]]
+scale = Vector2(2, 2)
+script = ExtResource("1_k347w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+scale = Vector2(2.1129, 2.20968)
+texture = ExtResource("1_mcnv5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(1.43051e-06, -2)
+scale = Vector2(1.73387, 2.20968)
+polygon = PackedVector2Array(15.5, -12.3, 15.5, 15.5, -15.5, 15.5, -15.5, 1.9, -7.5, -15, 11.5, -15.5)

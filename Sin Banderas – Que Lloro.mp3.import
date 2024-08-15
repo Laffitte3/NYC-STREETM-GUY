@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cj0atm4uynmow"
+path="res://.godot/imported/Sin Banderas – Que Lloro.mp3-7d654bee53d48a517e5715a49b543bd8.mp3str"
+
+[deps]
+
+source_file="res://Sin Banderas – Que Lloro.mp3"
+dest_files=["res://.godot/imported/Sin Banderas – Que Lloro.mp3-7d654bee53d48a517e5715a49b543bd8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

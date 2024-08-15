@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://snbjssvfrj0a"
+path="res://.godot/imported/The Ketchup Song (Asereje) (Spanish Version)   Las Ketchup.mp3-e4019c22598d8cfb3bf834eac53fb650.mp3str"
+
+[deps]
+
+source_file="res://The Ketchup Song (Asereje) (Spanish Version)   Las Ketchup.mp3"
+dest_files=["res://.godot/imported/The Ketchup Song (Asereje) (Spanish Version)   Las Ketchup.mp3-e4019c22598d8cfb3bf834eac53fb650.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

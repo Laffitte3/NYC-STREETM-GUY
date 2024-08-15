@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=3 uid="uid://dbkf2jiv2vfum"]
+
+[ext_resource type="Script" path="res://sierra.gd" id="1_csf3i"]
+[ext_resource type="Texture2D" uid="uid://cj07gojj1yrk4" path="res://cierra.png" id="1_jboqm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uiok0"]
+atlas = ExtResource("1_jboqm")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvqln"]
+atlas = ExtResource("1_jboqm")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7axy2"]
+atlas = ExtResource("1_jboqm")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dsva"]
+atlas = ExtResource("1_jboqm")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_om5mx"]
+atlas = ExtResource("1_jboqm")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h34vo"]
+atlas = ExtResource("1_jboqm")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4paj"]
+atlas = ExtResource("1_jboqm")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tobjd"]
+atlas = ExtResource("1_jboqm")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6m3h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uiok0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvqln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7axy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dsva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_om5mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h34vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4paj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tobjd")
+}],
+"loop": true,
+"name": &"girar",
+"speed": 15.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_frgel"]
+radius = 19.105
+
+[node name="sierra" type="Area2D" groups=["obstaculos"]]
+scale = Vector2(2, 2)
+script = ExtResource("1_csf3i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x6m3h")
+animation = &"girar"
+frame_progress = 0.0410568
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_frgel")
